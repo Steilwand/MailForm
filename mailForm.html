@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail-Form</title>
+    <link rel="stylesheet" href="mailForm.css">
+</head>
+
+<body>
+    <h1>A simple Mailform for you</h1>
+    <p>
+        Just a simple mailform you can copy for your next project. With a bit of JavaScript it can avoid false input
+        from the user so you are not running into any errors.
+    </p>
+    <h2>Contact Form</h2>
+    <div class="newsletter-form">
+        <form action="mailSent.php" method="post" onsubmit="return validateForm()">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="">
+            <span id="nameError" class="error"></span>
+
+            <label for="mail" style="padding-top: 10px;">Email</label>
+            <input type="text" name="mail" id="mail" placeholder="">
+            <span id="mailError" class="error"></span>
+
+            <label for="subject" style="padding-top: 10px;">Betreff</label>
+            <input type="text" name="subject" id="subject" placeholder="">
+            <span id="subjectError" class="error"></span>
+
+            <label for="message" style="padding-top: 10px;">Nachricht</label>
+            <textarea type="text" name="message" id="message" placeholder=""></textarea>
+            <span id="messageError" class="error"></span>
+
+            <input value="Absenden" type="submit" name="submit">
+        </form>
+    </div>
+
+    <script src="inputValidation.js"></script>
+</body>
+
+</html>
